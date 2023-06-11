@@ -1,0 +1,30 @@
+version: 2
+
+
+
+metrics:
+  - name: rolling_new_customers
+    label: New Customers
+    model: ref('stg_customers')
+    description: "The 14 day rolling count of paying customers using the product"
+
+    calculation_method: count_distinct
+    expression: customer_id 
+    
+    
+    
+
+    dimensions:
+      - first_name
+      
+    
+    
+
+    
+        
+    # general properties
+    config:
+      enabled: true
+      treat_null_values_as_zero: true 
+
+    meta: {team: Finance}

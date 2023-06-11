@@ -3,7 +3,7 @@ version: 2
 metrics:
   - name: revenue
     label: Revenue
-    model: ref('orders')
+    model: ref('orders'),ref('raw_customers')
     description: "The total revenue of our jaffle business"
 
     calculation_method: sum
@@ -14,6 +14,7 @@ metrics:
 
     dimensions:
       - customer_status
+      - first_name
       - had_credit_card_payment
       - had_coupon_payment
       - had_bank_transfer_payment
@@ -23,3 +24,7 @@ metrics:
       - field: status
         operator: '='
         value: "'completed'"
+        
+    config:
+      enabled: true
+      treat_null_values_as_zero: true 

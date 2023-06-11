@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: public
+    database: postgres
+    schema: public
+
+    tables:
+      - name: customer
+        columns:
+          - name: first_name
+          - name: order_id
+          - name: user_id
+
+      - name: order
+        columns:
+          - name: id
+          - name: status
+          - name: user_id
+
+      - name: payment
+        columns:
+          - name: id
+          - name: amount
+          - name: order_id
