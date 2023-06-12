@@ -3,7 +3,7 @@ name: 'jaffle_shop_metrics'
 config-version: 2
 version: '0.1'
 
-profile: {{env_var('DBT_PROFILE')}}
+profile: "{{env_var('DBT_PROFILE')}}"
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
