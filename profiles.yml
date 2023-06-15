@@ -7,6 +7,6 @@ jaffle_shop_metrics:
       user: postgres
       password: 27nawcUeWtnVwDfy
       port: 5432
-      dbname: postgres
+      dbname: "{{env_var('DBT_DB')}}"
       schema: public
       threads: 4
