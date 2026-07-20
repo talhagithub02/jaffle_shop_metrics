@@ -1,4 +1,4 @@
-{% set results = run_query('select 1 as id') %}
+{% set results = run_query('select 1 as id')}
 {{ config(alias='orderStaging',schema='dbt_test') }}
 
 with source as (
