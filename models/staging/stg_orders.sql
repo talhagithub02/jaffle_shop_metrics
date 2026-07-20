@@ -1,4 +1,4 @@
-{% set results = run_query('select 1 as id')}
+{% set results = run_query('select 1 as id')%}
 {{ config(alias='orderStaging',schema='dbt_test') }}
 
 with source as (
@@ -16,7 +16,7 @@ source_2 as (
     Normally we would select from the table here, but we are using seeds to load
     our data in this project
     #}
-    select * from {{ source('public','customer') }}
+    select * from 
 
 ),
 source_3 as (
